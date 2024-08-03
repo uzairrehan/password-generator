@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>
     <div class="main">
@@ -24,24 +23,5 @@
         <button class="generate" onclick="generatePassword()">Generate</button>
       </div>
     </div>
-    <script>
-      const input = document.querySelector("#gen-text");
-      const text =
-        "qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890";
-
-      function generatePassword() {
-        let generated = "";
-        for (let i = 0; i < 16; i++) {
-          const random = Math.floor(Math.random() * text.length);
-          generated += text.charAt(random);
-        }
-        input.value = generated;
-      }
-
-      function copyToClipboard() {
-        input.select();
-        document.execCommand("copy");
-      }
-    </script>
   </body>
 </html>
